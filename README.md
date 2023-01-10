@@ -9,4 +9,14 @@ python3 -m pip install -U discord.py
 ```
 
 ## Usage
-As of writing, the bot does not have any function yet, besides creating a connection to Discord. More updates to come.
+To use the bot, use
+```bash
+!<commandname>
+```
+with the following command names: (mostly for testing)
+* `hello` - say hello!
+* `add x y` - adds x and y
+* `labyu` - labyu too
+* `angry` - increments and prints angry counter"
+
+Still a work in progress.

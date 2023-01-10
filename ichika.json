@@ -1,0 +1,1 @@
+{"help": {"desc": "Type `!<commandname>` to use a particular command.", "commands": "`hello` - say hello!\n`add x y` - adds x and y\n`labyu` - labyu too\n`angry` - increments and prints angry counter"}, "angry": {"count": "5", "cooldown": "0"}}
