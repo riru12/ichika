@@ -20,6 +20,6 @@ with the following command names: (mostly for testing)
 * `hello` - say hello!
 * `add x y` - adds x and y
 * `labyu` - labyu too
-* `angry` - increments and prints angry counter"
+* `angry` - increments and prints angry counter
 
 Still a work in progress.
