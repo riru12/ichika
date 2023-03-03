@@ -1,5 +1,4 @@
-import discord
-import json
+import discord, json, datetime
 from discord.ext import commands
 from dotenv import dotenv_values
 
@@ -40,7 +39,9 @@ async def add(ctx, a, b):
 
 @bot.command()
 async def labyu(ctx):
-    await ctx.send("labyu too")
+    # command only works for ARIA_ID
+    if (ctx.author.id == int(dotenv_values(".env")["ARIA_ID"])):
+        await ctx.send("labyu too")
 
 @bot.command()
 async def angry(ctx):
@@ -49,16 +50,20 @@ async def angry(ctx):
     data = json.load(jsonFile)
     jsonFile.close()
 
-    # not yet working
+    # fetch values from data, then modify for printing later
+    angryCount = str(int(data["angry"]["count"])+1)
+    notAngryTime = ctx.message.created_at.timestamp() - data["angry"]["lastused"]
+    notAngryTime_formatted = str(datetime.timedelta(seconds=notAngryTime)).split(".")[0]
+
+    # updating of angry count and lastused
     data["angry"]["count"] = str(int(data["angry"]["count"])+1)
+    data["angry"]["lastused"] = ctx.message.created_at.timestamp()
 
     # writing of data to ichika.json
     jsonFile = open("ichika.json", "w+")
-    jsonFile.write(json.dumps(data))
+    jsonFile.write(json.dumps(data, indent=4))
     jsonFile.close()
 
     # print angry count
-    angryCount = data["angry"]["count"]
-    await ctx.send(f"Angry count: {angryCount}")
-
+    await ctx.send(f"Angry count: **{angryCount}**\nTime since was last angry: **{notAngryTime_formatted}**")
 bot.run(TOKEN)
