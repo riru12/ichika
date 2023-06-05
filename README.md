@@ -17,7 +17,7 @@ with the following command names:
 * `hello` - say hello!
 * `add <x> <y>` - adds x and y
 * `labyu` - labyu too
-* `angry` - display angry stats
+* `angry` - increments counter and displays stats
 * `scidl <format> <entry>` - download from sci-hub using **link** or **title** format"
 
 Still a work in progress.
