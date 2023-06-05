@@ -1,7 +1,7 @@
 {
     "help": {
         "desc": "Type `!<commandname>` to use a particular command.",
-        "commands": "`hello` - say hello!\n`add <x> <y>` - adds x and y\n`labyu` - labyu too\n`angry` - display angry stats\n `scidl <format> <entry>` - download from sci-hub using **link** or **title** format"
+        "commands": "`hello` - say hello!\n`add <x> <y>` - adds x and y\n`labyu` - labyu too\n`angry` - display angry stats\n `scidl <entry>` - download from sci-hub given a search entry"
     },
     "angry": {
         "count": "6",
