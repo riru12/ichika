@@ -1,10 +1,10 @@
 {
     "help": {
         "desc": "Type `!<commandname>` to use a particular command.",
-        "commands": "`hello` - say hello!\n`add x y` - adds x and y\n`labyu` - labyu too\n`angry` - display angry stats"
+        "commands": "`hello` - say hello!\n`add <x> <y>` - adds x and y\n`labyu` - labyu too\n`angry` - display angry stats\n `scidl <format> <entry>` - download from sci-hub using **link** or **title** format"
     },
     "angry": {
-        "count": "5",
-        "lastused": 1673428496.771
+        "count": "6",
+        "lastused": 1685955547.875
     }
 }

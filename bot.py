@@ -1,6 +1,8 @@
 import discord, json, datetime
 from discord.ext import commands
 from dotenv import dotenv_values
+import os
+from scidownl import scihub_download
 
 TOKEN = dotenv_values(".env")["DISCORD_TOKEN"]
 
@@ -22,7 +24,7 @@ async def help(ctx):
     helpCommands=data["help"]["commands"]
 
     # embed formatting
-    embed=discord.Embed(title="Ichika Commands", description=helpDesc)
+    embed=discord.Embed(entry="Ichika Commands", description=helpDesc)
     embed.add_field(name="Command List", value=helpCommands, inline=False)
     embed.set_footer(text="Bot written by riru#7618")
 
@@ -66,4 +68,24 @@ async def angry(ctx):
 
     # print angry count
     await ctx.send(f"Angry count: **{angryCount}**\nTime since was last angry: **{notAngryTime_formatted}**")
+
+@bot.command()
+async def scidl(ctx, form, *, entry: str):
+    paper = entry
+    paper_type = form
+    out = "./papers/"+entry+".pdf"
+    proxies = {
+        'http': 'socks5://127.0.0.1:7890'
+    }
+    try:
+        scihub_download(paper, paper_type=paper_type, out=out, proxies=proxies) # download the paper
+        if os.path.exists(out):
+            await ctx.send(f"Paper retrieved: **{entry}**")
+            await ctx.send(file=discord.File(out)) # upload on discord
+            os.remove(out) # delete the file after it has been uploaded
+        else:
+            raise Exception('error')
+    except:
+         await ctx.send("There was an error in downloading the paper. This paper either **(a)** does not exist or **(b)** is not found in the sci-hub database.")
+         
 bot.run(TOKEN)
