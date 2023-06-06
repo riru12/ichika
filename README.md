@@ -18,6 +18,6 @@ with the following command names:
 * `add <x> <y>` - adds x and y
 * `labyu` - labyu too
 * `angry` - increments counter and displays stats
-* `scidl <entry>` - download from sci-hub given a search entry"
+* `scidl <entry>` - download from sci-hub given a search entry
 
 Still a work in progress.
