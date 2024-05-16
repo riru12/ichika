@@ -1,39 +1,19 @@
-# create-svelte
+# 一華
+"_ichika_" - A manga-reader webapp built with SvelteKit. This project was created to learn more about SvelteKit's routing as well as back-end development.
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+## Launch
+To run the application, follow the following steps:
+1. Create a `.env.local` file in the root directory
+2. Add the following environment variable to it.
 ```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
+VITE_PUBLIC_CLOUDINARY_CLOUD_NAME="<Your Cloud Name>"
+```
+3. Run
+```
+npm install
+```
+4. Finally, run the following command
+```
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-# ichika
+Note: This project is still in development. Scripts are currently configured to request from a a back-end on local port `3000`. **View the back-end repository [here](https://github.com/riru12/ichika-backend).**
