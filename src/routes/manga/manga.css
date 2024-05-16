@@ -7,4 +7,15 @@
 .manga-list > div > a{
     aspect-ratio: 5 / 7.5;
     max-height: 16rem;
+    flex-shrink:0;
+}
+
+.manga-list > div > div > h2{
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.manga-list > div > div > p{
+    margin-top: 1rem;
 }
