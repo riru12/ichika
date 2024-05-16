@@ -2,7 +2,7 @@
 "_ichika_" - A manga-reader webapp built with SvelteKit. This project was created to learn more about SvelteKit's routing as well as back-end development.
 
 ## Launch
-To run the application, follow the following steps:
+To run the application, follow the following steps
 1. Create a `.env.local` file in the root directory
 2. Add the following environment variable to it.
 ```
@@ -16,4 +16,7 @@ npm install
 ```
 npm run dev
 ```
-Note: This project is still in development. Scripts are currently configured to request from a a back-end on local port `3000`. **View the back-end repository [here](https://github.com/riru12/ichika-backend).**
+Note: Steps 1-2 are taken from [svelte-cloudinary](https://github.com/cloudinary-community/svelte-cloudinary)'s Installation guide:
+
+This project is still in development. Scripts are currently configured to request from a a back-end on local port `3000`. **View the back-end repository [here](https://github.com/riru12/ichika-backend).**
+
