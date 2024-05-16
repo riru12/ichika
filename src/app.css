@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --dark-blue: rgba(28, 28, 40, 1);
+    --blue: rgba(150, 150, 200, 1);
+    --gray: rgba(135, 135, 135, 0.8);
+}
+
+body {
+    background-color: var(--dark-blue);
+    color: var(--gray);
+}

@@ -1,0 +1,10 @@
+.manga-list{
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.manga-list > div > a{
+    aspect-ratio: 5 / 7.5;
+    max-height: 16rem;
+}
