@@ -2,23 +2,26 @@
     import "./manga.css";
     import { CldImage } from 'svelte-cloudinary';
 
-    // obtain manga list from cloudinary (./+page.ts)
     export let data;
+    console.log(data);
 </script>
 
-<section class="mx-12 md:mx-24 xl:mx-60 2xl:mx-96 py-8">
+<section class="relative mx-12 md:mx-24 xl:mx-60 2xl:mx-96 py-8">
     <div class="manga-list">
-        {#each data.mangaList as manga}
+        {#each data.mangaList.mangas as manga}
             <div class="flex flex-row gap-4">
-                <a href={`/manga/${manga.path}`}>
-                    <CldImage width="500" height="750" src={`${manga.path}/cover`} alt="<Alt Text>" />
+                <a href={`/manga/${manga._id}`}>
+                    <CldImage width="500" height="750" src={`${manga._id}/cover`} alt={`${manga.title} Cover`} />
                 </a>
-                <div>
-                    <h2><a href={`/manga/${manga.path}`}>{manga.name}</a></h2>
-                    <h3>author</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div>  
+                    <h2><a href={`/manga/${manga._id}`}>{manga.title}</a></h2>
+                    <h3>{manga.author}</h3>
+                    <p>{manga.desc}</p>
                 </div>
             </div>
         {/each}
+    </div>
+    <div class="fixed right-10 bottom-10">
+        <a class="px-4 py-2 bg-[#9696c8d9] text-black rounded-3xl" href="/manga/new">Add New Manga</a>
     </div>
 </section>

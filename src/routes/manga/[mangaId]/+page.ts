@@ -6,6 +6,7 @@ export const load = async ({ params, fetch }) => {
     }
 
     return {
+        mangaId: params.mangaId,
         chapters: await fetchChapters(params.mangaId)
     }
 }   
