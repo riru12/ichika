@@ -1,5 +1,5 @@
 <section class="mx-12 md:mx-24 xl:mx-60 2xl:mx-96 py-8">
-    <form action="http://localhost:3000/api/manga/new" method="post" id="new-manga">
+    <form action="http://localhost:3000/api/manga/new" method="post" id="new-manga" enctype='multipart/form-data'>
         <div class="flex flex-col gap-4">
             <div class="flex flex-row gap-4 w-full flex-wrap">
                 <div class="flex flex-col gap-1 flex-grow">

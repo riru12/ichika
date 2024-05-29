@@ -11,7 +11,7 @@
         {#each data.mangaList.mangas as manga}
             <div class="flex flex-row gap-4">
                 <a href={`/manga/${manga._id}`}>
-                    <CldImage width="500" height="750" src={`${manga._id}/cover`} alt={`${manga.title} Cover`} />
+                    <CldImage width="500" height="750" src={`${manga._id}/${manga.coverImg}`} alt={`${manga.title} Cover`} />
                 </a>
                 <div>  
                     <h2><a href={`/manga/${manga._id}`}>{manga.title}</a></h2>
