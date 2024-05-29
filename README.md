@@ -18,5 +18,5 @@ npm run dev
 ```
 Note: Steps 1-2 are taken from [svelte-cloudinary](https://github.com/cloudinary-community/svelte-cloudinary)'s Installation guide:
 
-This project is still in development. Scripts are currently configured to request from a a back-end on local port `3000`. **View the back-end repository [here](https://github.com/riru12/ichika-backend).**
+This project is still in development. Scripts are currently configured to request from a a back-end on local port `3000`. **View the API repository [here](https://github.com/riru12/ichika-api).**
 
