@@ -1,10 +1,10 @@
 <script>
 	import "../app.css";
 
-	import AccountIcon from "./icons/AccountIcon.svelte";
-    import HamburgerIcon from "./icons/HamburgerIcon.svelte";
-	import HomeIcon from "./icons/HomeIcon.svelte";
-	import BookIcon from "./icons/BookIcon.svelte";
+	import AccountIcon from "./navIcons/AccountIcon.svelte";
+    import HamburgerIcon from "./navIcons/HamburgerIcon.svelte";
+	import HomeIcon from "./navIcons/HomeIcon.svelte";
+	import BookIcon from "./navIcons/BookIcon.svelte";
 
 	let mobileNav = 0;
 	function mobileNavToggle(){

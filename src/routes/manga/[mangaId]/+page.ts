@@ -1,12 +1,11 @@
 export const load = async ({ params, fetch }) => {
     async function fetchChapters( id:string ){
-        const response = await fetch(`http://localhost:3000/sub_folders/${id}`);
+        const response = await fetch(`http://localhost:3000/api/manga/${id}`);
         const data = await response.json();
-        return data.folders;
+        return data.manga
     }
 
     return {
-        mangaId: params.mangaId,
-        chapters: await fetchChapters(params.mangaId)
+        manga: await fetchChapters(params.mangaId)
     }
 }   
