@@ -3,6 +3,8 @@
 
     export let data;
 
+    console.log(data.manga.chapters)
+
     function deleteManga(id: string) {
         var result = confirm("Delete this manga? This action is irreversible.");
         if (result) {
@@ -54,7 +56,13 @@
         <h2 class="text-white font-bold text-2xl">Chapters</h2>
         <div class="flex flex-col gap-1 mt-4">
             {#each data.manga.chapters as chapters}
-                <p class="text-base bg-[#13131a] text-white font-bold px-3 py-1 rounded">{`Ch. ${chapters}`}</p>
+                <div class="text-base bg-[#13131a] text-white font-bold px-3 py-1 rounded">
+                    <div class="flex flex-row justify-between">
+                        <p>{`Ch. ${chapters.chapterNo} ${chapters.title ? `- ${chapters.title}` : ''}`}</p>
+                        <p class="font-normal text-neutral-500">{chapters.createdAt}</p>
+                    </div>
+                    <p class="text-sm font-normal text-neutral-600">{chapters.language}</p>
+                </div>
             {/each}
         </div>
     </div>
