@@ -51,7 +51,7 @@
             </div>
             <div class="flex flex-col">
                 <label for="genres" class="text-sm ml-2">Genres</label>
-                <div id="genre-list" class="flex flex-row items-center gap-2">
+                <div id="genre-list" class="flex flex-row items-center gap-2 flex-wrap">
                     <input id="genre-input" type="text" placeholder="Enter a genre" class="rounded-3xl px-4 py-1 bg-[#13131a] text-white placeholder:text-neutral-600 w-min">
                     <button on:click={genreHandler} type="button">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
