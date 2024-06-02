@@ -26,11 +26,11 @@
         {/each}
     </div>
     <div class="fixed right-10 bottom-10">
-        <a class="px-4 py-2 bg-indigo-700 flex flex-row items-center gap-3 text-white hover:brightness-125 rounded-3xl" href="/manga/new">
+        <a class="px-4 py-2 bg-indigo-700 flex flex-row justify-center items-center gap-3 text-white hover:brightness-125 rounded-[50%] h-12 w-12 md:h-auto md:w-auto md:rounded-3xl" href="/manga/new">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
                 <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
             </svg>
-            Add New Manga
+            <span class="hidden md:block">Add New Manga</span>
         </a>
     </div>
 </section>
