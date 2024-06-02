@@ -22,7 +22,7 @@
                 <h2 class="text-3xl font-bold text-white">{data.manga.title}</h2>
                 <h1 class="text-neutral-600">{data.manga.author}</h1>
                 <p class="mt-2">{data.manga.desc}</p>
-                <div class="flex flex-row gap-2 mt-2">
+                <div class="flex flex-row gap-2 mt-2 flex-wrap">
                     {#each data.manga.genres as genres}
                         <p class="text-sm bg-neutral-800 px-3 py-1 rounded-xl">{genres}</p>
                     {/each}
