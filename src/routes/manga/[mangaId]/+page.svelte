@@ -14,9 +14,9 @@
 
 <section class="flex flex-col items-center mt-8 gap-8">
     <div class="flex md:flex-row flex-col w-3/4 2xl:w-1/2 md:gap-6 gap-4">
-        <a href={`/manga/${data.manga._id}`} class="aspect-[5/7.5] md:flex-shrink-0 max-h-64 min-h-64">
+        <div class="aspect-[5/7.5] md:flex-shrink-0">
             <CldImage width="500" height="750" src={`${data.manga._id}/${data.manga.coverImg}`} alt={`${data.manga.title} Cover`} class="rounded"/>
-        </a>
+        </div>
         <div class="flex flex-col justify-around gap-8">
             <div>
                 <h2 class="text-3xl font-bold text-white">{data.manga.title}</h2>
@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="flex flex-row gap-2 flex-wrap">
-                <a href={`/manga/`} class="w-min md:basis-0 basis-full whitespace-nowrap bg-indigo-700 px-4 py-2 rounded-xl flex flex-row gap-2 items-center justify-center hover:brightness-125">
+                <a href={`/`} class="w-min md:basis-0 basis-full whitespace-nowrap bg-indigo-700 px-4 py-2 rounded-xl flex flex-row gap-2 items-center justify-center hover:brightness-125">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="white" class="w-5 h-5">
                         <path d="M7.25 3.688a8.035 8.035 0 0 0-4.872-.523A.48.48 0 0 0 2 3.64v7.994c0 .345.342.588.679.512a6.02 6.02 0 0 1 4.571.81V3.688ZM8.75 12.956a6.02 6.02 0 0 1 4.571-.81c.337.075.679-.167.679-.512V3.64a.48.48 0 0 0-.378-.475 8.034 8.034 0 0 0-4.872.523v9.268Z" />
                     </svg>
