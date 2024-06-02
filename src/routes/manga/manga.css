@@ -1,12 +1,12 @@
 .manga-list{
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 1rem;
+    gap: 2.5rem;
 }
 
 .manga-list > div > a{
     aspect-ratio: 5 / 7.5;
-    max-height: 12rem;
+    /* max-height: 12rem; */
     flex-shrink:0;
 }
 
