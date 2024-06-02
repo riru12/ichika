@@ -6,7 +6,7 @@
 
 .manga-list > div > a{
     aspect-ratio: 5 / 7.5;
-    max-height: 16rem;
+    max-height: 12rem;
     flex-shrink:0;
 }
 

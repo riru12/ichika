@@ -14,7 +14,7 @@
                 </a>
                 <div>  
                     <h2><a href={`/manga/${manga._id}`}>{manga.title}</a></h2>
-                    <h3>{manga.author}</h3>
+                    <h3 class="text-neutral-600">{manga.author}</h3>
                     <p>{manga.desc}</p>
                 </div>
             </div>
