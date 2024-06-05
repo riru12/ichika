@@ -53,17 +53,30 @@
         </div>
     </div>
     <div class="w-3/4 2xl:w-1/2">
-        <h2 class="text-white font-bold text-2xl">Chapters</h2>
+        <div class="flex flex-row justify-between">
+            <h2 class="text-white font-bold text-2xl">Chapters</h2>
+            <a href="/" class="bg-[#4338ca] rounded-[50%] h-6 w-6 flex justify-center items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-4">
+                    <path fill-rule="evenodd" d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
+                </svg>
+            </a>
+        </div>
         <div class="flex flex-col gap-1 mt-4">
-            {#each data.manga.chapters as chapters}
-                <div class="text-base bg-[#13131a] text-white font-bold px-3 py-1 rounded">
-                    <div class="flex flex-row justify-between">
-                        <p>{`Ch. ${chapters.chapterNo} ${chapters.title ? `- ${chapters.title}` : ''}`}</p>
-                        <p class="font-normal text-neutral-500">{chapters.createdAt}</p>
+            {#if data.manga.chapters && data.manga.chapters.length > 0}
+                {#each data.manga.chapters as chapters}
+                    <div class="text-base bg-[#13131a] text-white font-bold px-3 py-1 rounded">
+                        <div class="flex flex-row justify-between">
+                            <p>{`Ch. ${chapters.chapterNo} ${chapters.title ? `- ${chapters.title}` : ''}`}</p>
+                            <p class="font-normal text-neutral-500">{chapters.createdAt}</p>
+                        </div>
+                        <p class="text-sm font-normal text-neutral-600">{chapters.language}</p>
                     </div>
-                    <p class="text-sm font-normal text-neutral-600">{chapters.language}</p>
-                </div>
-            {/each}
+                {/each}
+                {:else}
+                    <div class="flex justify-center py-4">
+                        <p>No uploaded chapters</p>
+                    </div>
+            {/if}
         </div>
     </div>
 
