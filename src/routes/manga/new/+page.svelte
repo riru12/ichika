@@ -1,30 +1,34 @@
 <script lang="ts">
-    function genreHandler(){
+    function createGenreItem(genreValue: string) {
+        const genreList = document.getElementById('genre-list');
+        const genreItemWrapper = document.createElement('div');
+        genreItemWrapper.classList.add('flex', 'flex-row', 'bg-neutral-600', 'px-1', 'py-1', 'rounded-xl');
+
+        const genreItem = document.createElement('input');
+        genreItem.classList.add('text-sm', 'bg-neutral-600', 'text-neutral-300', 'text-center', 'pointer-events-none');
+        genreItem.type = "text";
+        genreItem.size = genreValue.length + 2;
+        genreItem.value = genreValue;
+        genreItem.name = "genres[]";
+        genreItem.readOnly = true;
+
+        const genreDel = document.createElement('button');
+        genreDel.innerHTML = "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='currentColor' class='size-4'><path d='M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z' /></svg>";
+        genreDel.onclick = function () {
+            genreList?.removeChild(genreItemWrapper);
+        };
+
+        genreItemWrapper.appendChild(genreItem);
+        genreItemWrapper.appendChild(genreDel);
+        genreList?.appendChild(genreItemWrapper);
+    }
+
+    function genreHandler() {
         const genreInput = document.getElementById('genre-input') as HTMLInputElement;
         const inp = genreInput?.value;
-        if (inp){
-            const genreList = document.getElementById('genre-list');
-            const genreItemWrapper = document.createElement('div');
-            genreItemWrapper.classList.add('flex', 'flex-row', 'bg-neutral-600', 'px-1', 'py-1', 'rounded-xl')
-            
-            const genreItem = document.createElement('input');
-            genreItem.classList.add('text-sm', 'bg-neutral-600', 'text-neutral-300', 'text-center', 'pointer-events-none')
-            genreItem!.type = "text";
-            genreItem!.size = inp.length+1;
-            genreItem!.value = inp;
-            genreItem!.name = "genres[]";
-            genreItem!.readOnly = true;
-
-            const genreDel = document.createElement('button');
-            genreDel.innerHTML = "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='currentColor' class='size-4'><path d='M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z' /></svg>"
-            genreDel.onclick = function () {
-                genreList?.removeChild(genreItemWrapper);
-            };
-
-            genreItemWrapper.appendChild(genreItem);
-            genreItemWrapper.appendChild(genreDel);
-            genreList?.appendChild(genreItemWrapper);
-            genreInput!.value = '';
+        if (inp) {
+            createGenreItem(inp);
+            genreInput.value = '';
         }
     }
 </script>
